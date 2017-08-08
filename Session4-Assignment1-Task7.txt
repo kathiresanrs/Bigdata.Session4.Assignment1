@@ -1,0 +1,53 @@
+Method Overloading
+
+In a class, there can be several methods sharing the same name but it can differ in
+
+    Parameter types
+    Number of parameters
+    Order of the parameters declared in the method
+
+Depending on the parameters provided for the method, in the run time, compiler determines which version of the method to execute.
+
+
+An overloaded method may or may not have different return types. 
+But return type alone is not sufficient for the compiler to determine which method is to be executed at run time.
+
+
+Example
+------
+
+class OverloadDisplay
+{
+    
+    public void display(char c)
+    {
+         System.out.println(c);
+    }
+
+    public void display(char c, int num)  
+    {
+         System.out.println(c + " "+num);
+    }
+
+
+    public void display(int num )  
+    {
+         System.out.println(num);
+    }
+}
+
+
+class Sample
+{
+   public static void main(String args[])
+   {
+       OverloadDisplay obj = new OverloadDisplay();
+
+       obj.display('a');
+       obj.display('a',10);
+       obj.display(10);
+   }
+}
+
+In this example return and method name is same but it differs in the number of arguments and type as illustrated.
+Changing the return alone would not suffice to implement method overloading
